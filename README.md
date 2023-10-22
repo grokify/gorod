@@ -5,7 +5,7 @@
 [![Docs][docs-godoc-svg]][docs-godoc-url]
 [![License][license-svg]][license-url]
 
-`gorod` is a package that provides helpers for the Rod (`rod`) RPA library.
+`gorod` is a package that provides helpers for the Rod ([`rod`](https://github.com/go-rod/rod)) web automation library.
 
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/gorod/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/gorod?badge
