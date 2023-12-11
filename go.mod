@@ -6,11 +6,10 @@ go 1.21
 
 require (
 	github.com/go-rod/rod v0.114.5
-	github.com/grokify/mogo v0.61.1
+	github.com/grokify/mogo v0.62.3
 )
 
 require (
-	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/huandu/xstrings v1.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -20,6 +19,6 @@ require (
 	github.com/ysmood/got v0.36.3 // indirect
 	github.com/ysmood/gson v0.7.3 // indirect
 	github.com/ysmood/leakless v0.8.0 // indirect
-	golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa // indirect
+	golang.org/x/exp v0.0.0-20231206192017-f3f8817b8deb // indirect
 	golang.org/x/text v0.14.0 // indirect
 )
