@@ -6,7 +6,7 @@ go 1.21
 
 require (
 	github.com/go-rod/rod v0.114.5
-	github.com/grokify/mogo v0.62.5
+	github.com/grokify/mogo v0.62.6
 )
 
 require (
@@ -19,6 +19,6 @@ require (
 	github.com/ysmood/got v0.36.3 // indirect
 	github.com/ysmood/gson v0.7.3 // indirect
 	github.com/ysmood/leakless v0.8.0 // indirect
-	golang.org/x/exp v0.0.0-20231214170342-aacd6d4b4611 // indirect
+	golang.org/x/exp v0.0.0-20231219180239-dc181d75b848 // indirect
 	golang.org/x/text v0.14.0 // indirect
 )
