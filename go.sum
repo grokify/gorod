@@ -1,8 +1,8 @@
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/go-rod/rod v0.114.6 h1:NrutWvLGn6Vea+0ZpLSHQ2cT5UMTqk9DeO+V6xeJBxw=
-github.com/go-rod/rod v0.114.6/go.mod h1:aiedSEFg5DwG/fnNbUOTPMTTWX3MRj6vIs/a684Mthw=
+github.com/go-rod/rod v0.114.7 h1:h4pimzSOUnw7Eo41zdJA788XsawzHjJMyzCE3BrBww0=
+github.com/go-rod/rod v0.114.7/go.mod h1:aiedSEFg5DwG/fnNbUOTPMTTWX3MRj6vIs/a684Mthw=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
 github.com/grokify/mogo v0.62.7 h1:kaGnLw1yjc5tNOCs8QAcirvOjatn3l4Ct6ywQUz4sRA=
 github.com/grokify/mogo v0.62.7/go.mod h1:TSoSr/DFvt0UuEhUgKzGO4psWdiLPgXGcvl5RKE2p2M=

@@ -5,7 +5,7 @@ go 1.21
 // toolchain go1.21.1
 
 require (
-	github.com/go-rod/rod v0.114.6
+	github.com/go-rod/rod v0.114.7
 	github.com/grokify/mogo v0.62.7
 )
 
