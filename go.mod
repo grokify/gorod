@@ -1,12 +1,11 @@
 module github.com/grokify/gorod
 
 go 1.22
-
-toolchain go1.22.1
+toolchain go1.22.2
 
 require (
 	github.com/go-rod/rod v0.115.0
-	github.com/grokify/mogo v0.63.8
+	github.com/grokify/mogo v0.64.0
 )
 
 require (
@@ -19,6 +18,6 @@ require (
 	github.com/ysmood/got v0.39.4 // indirect
 	github.com/ysmood/gson v0.7.3 // indirect
 	github.com/ysmood/leakless v0.8.0 // indirect
-	golang.org/x/exp v0.0.0-20240409090435-93d18d7e34b8 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842 // indirect
+	golang.org/x/text v0.15.0 // indirect
 )
