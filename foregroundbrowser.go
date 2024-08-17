@@ -25,7 +25,7 @@ func (fb *ForegroundBrowser) Close() {
 	}
 }
 
-func NewForegroundBrowserPaused(navURL string, delaySeconds uint, paused bool) ForegroundBrowser {
+func NewForegroundBrowserPaused(navURL string, delaySeconds uint, paused bool) (ForegroundBrowser, error) {
 	// Headless runs the browser on foreground, you can also use flag "-rod=show"
 	// Devtools opens the tab in each new tab opened automatically
 	l := launcher.New().
@@ -62,12 +62,15 @@ func NewForegroundBrowserPaused(navURL string, delaySeconds uint, paused bool) F
 	if paused {
 		fmt.Println("Press the Enter Key after logging in!")
 		var input string
-		fmt.Scanln(&input)
+		_, err := fmt.Scanln(&input)
+		if err != nil {
+			return ForegroundBrowser{}, err
+		}
 	}
 
 	return ForegroundBrowser{
 		Launcher: l,
-		Browser:  browser}
+		Browser:  browser}, nil
 }
 
 func (fb *ForegroundBrowser) GetWriteFileHTML(url, filename string, perm os.FileMode, force bool, writeDelay time.Duration) error {
