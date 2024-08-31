@@ -6,7 +6,7 @@ toolchain go1.22.2
 
 require (
 	github.com/go-rod/rod v0.116.2
-	github.com/grokify/mogo v0.64.7
+	github.com/grokify/mogo v0.64.9
 )
 
 require (
@@ -19,6 +19,6 @@ require (
 	github.com/ysmood/got v0.40.0 // indirect
 	github.com/ysmood/gson v0.7.3 // indirect
 	github.com/ysmood/leakless v0.9.0 // indirect
-	golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa // indirect
+	golang.org/x/exp v0.0.0-20240823005443-9b4947da3948 // indirect
 	golang.org/x/text v0.17.0 // indirect
 )
