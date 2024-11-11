@@ -1,6 +1,7 @@
 package gorod
 
 import (
+	"errors"
 	"fmt"
 	"os"
 	"time"
@@ -25,7 +26,13 @@ func (fb *ForegroundBrowser) Close() {
 	}
 }
 
-func NewForegroundBrowserPaused(navURL string, delaySeconds uint, paused bool) (ForegroundBrowser, error) {
+// NewForegroundBrowserPaused creates a new `ForegroundBrowser{}`. `delaySeconds`
+// must be positive and is converted to postive if negative.
+func NewForegroundBrowserPaused(navURL string, delaySeconds int, paused bool) (ForegroundBrowser, error) {
+	if delaySeconds < 0 {
+		return ForegroundBrowser{}, errors.New("delaySeconds must be non-negative")
+	}
+
 	// Headless runs the browser on foreground, you can also use flag "-rod=show"
 	// Devtools opens the tab in each new tab opened automatically
 	l := launcher.New().
@@ -78,12 +85,12 @@ func (fb *ForegroundBrowser) GetWriteFileHTML(url, filename string, perm os.File
 		return nil
 	}
 	page := fb.Browser.MustPage(url)
-	ht, err := page.HTML()
-	if err != nil {
+	if ht, err := page.HTML(); err != nil {
 		return err
+	} else {
+		time.Sleep(writeDelay)
+		return os.WriteFile(filename, []byte(ht), perm)
 	}
-	time.Sleep(writeDelay)
-	return os.WriteFile(filename, []byte(ht), perm)
 }
 
 // GetWriteFileMulti stores HTML and PNG screenshots.
@@ -104,9 +111,9 @@ func (fb *ForegroundBrowser) GetWriteFileMulti(srcURL, filenameHTML string, perm
 	if !force && err == nil && existsHTML {
 		return nil
 	}
-	ht, err := page.HTML()
-	if err != nil {
+	if ht, err := page.HTML(); err != nil {
 		return err
+	} else {
+		return os.WriteFile(filenameHTML, []byte(ht), perm)
 	}
-	return os.WriteFile(filenameHTML, []byte(ht), perm)
 }
