@@ -27,7 +27,7 @@ func (fb *ForegroundBrowser) Close() {
 }
 
 // NewForegroundBrowserPaused creates a new `ForegroundBrowser{}`. `delaySeconds`
-// must be positive and is converted to postive if negative.
+// must be positive and is converted to positive if negative.
 func NewForegroundBrowserPaused(navURL string, delaySeconds int, paused bool) (ForegroundBrowser, error) {
 	if delaySeconds < 0 {
 		return ForegroundBrowser{}, errors.New("delaySeconds must be non-negative")
