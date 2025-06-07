@@ -10,9 +10,9 @@
 
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/gorod/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/gorod?badge
- [build-status-svg]: https://github.com/grokify/gorod/actions/workflows/ci.yaml/badge.svg?branch=master
+ [build-status-svg]: https://github.com/grokify/gorod/actions/workflows/ci.yaml/badge.svg?branch=main
  [build-status-url]: https://github.com/grokify/gorod/actions/workflows/ci.yaml
- [lint-status-svg]: https://github.com/grokify/gorod/actions/workflows/lint.yaml/badge.svg?branch=master
+ [lint-status-svg]: https://github.com/grokify/gorod/actions/workflows/lint.yaml/badge.svg?branch=main
  [lint-status-url]: https://github.com/grokify/gorod/actions/workflows/lint.yaml
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/gorod
  [goreport-url]: https://goreportcard.com/report/github.com/grokify/gorod
