@@ -1,6 +1,7 @@
 # GoRod
 
 [![Build Status][build-status-svg]][build-status-url]
+[![Lint Status][lint-status-svg]][lint-status-url]
 [![Go Report Card][goreport-svg]][goreport-url]
 [![Docs][docs-godoc-svg]][docs-godoc-url]
 [![License][license-svg]][license-url]
@@ -9,8 +10,10 @@
 
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/gorod/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/gorod?badge
- [build-status-svg]: https://github.com/grokify/gorod/workflows/test/badge.svg
- [build-status-url]: https://github.com/grokify/gorod/actions/workflows/test.yaml
+ [build-status-svg]: https://github.com/grokify/gorod/actions/workflows/ci.yaml/badge.svg?branch=master
+ [build-status-url]: https://github.com/grokify/gorod/actions/workflows/ci.yaml
+ [lint-status-svg]: https://github.com/grokify/gorod/actions/workflows/lint.yaml/badge.svg?branch=master
+ [lint-status-url]: https://github.com/grokify/gorod/actions/workflows/lint.yaml
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/gorod
  [goreport-url]: https://goreportcard.com/report/github.com/grokify/gorod
  [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/grokify/gorod
