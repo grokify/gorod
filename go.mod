@@ -6,7 +6,7 @@ toolchain go1.24.1
 
 require (
 	github.com/go-rod/rod v0.116.2
-	github.com/grokify/mogo v0.70.3
+	github.com/grokify/mogo v0.70.8
 )
 
 require (
