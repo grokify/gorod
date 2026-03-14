@@ -63,7 +63,9 @@ func init() {
 	fetchCmd.Flags().IntVarP(&fetchTimeout, "timeout", "t", 30, "Timeout in seconds")
 	fetchCmd.Flags().BoolVar(&fetchHeadless, "headless", true, "Run in headless mode")
 
-	fetchCmd.MarkFlagRequired("url")
+	if err := fetchCmd.MarkFlagRequired("url"); err != nil {
+		panic(err)
+	}
 }
 
 func runFetch(cmd *cobra.Command, args []string) error {

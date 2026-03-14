@@ -8,10 +8,8 @@ import (
 )
 
 func main() {
-	wantURL := "https://github.com/grokify"
-	wantURL = "https://analysis.dinq.me/github?user=grokify"
-	outfile := "example.png"
-	outfile = "dinkq-grokify.png"
+	wantURL := "https://analysis.dinq.me/github?user=grokify"
+	outfile := "dinkq-grokify.png"
 
 	_, err := gorod.RetrieveWriteScreenshotFullPage(nil, wantURL, outfile, nil)
 	if err != nil {
