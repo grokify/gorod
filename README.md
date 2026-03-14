@@ -41,11 +41,11 @@ go install github.com/grokify/gorod/cmd/gorod@latest
 
 ## Features
 
-- **Interactive Browser Sessions** - Launch browsers that pause for manual interaction (e.g., login, CAPTCHA)
-- **Cookie Extraction** - Extract browser cookies and convert to standard `http.Cookie` format
-- **Wait Helpers** - Wait for elements to be visible or clickable with timeout
-- **Screenshot Capture** - Full-page screenshots with HTTP status handling
-- **CLI Tool** - Command-line tool for headless page fetching
+- 🖥️ **Interactive Browser Sessions** - Launch browsers that pause for manual interaction (e.g., login, CAPTCHA)
+- 🍪 **Cookie Extraction** - Extract browser cookies and convert to standard `http.Cookie` format
+- ⏳ **Wait Helpers** - Wait for elements to be visible or clickable with timeout
+- 📸 **Screenshot Capture** - Full-page screenshots with HTTP status handling
+- 🛠️ **CLI Tool** - Command-line tool for headless page fetching
 
 ## Quick Start
 
