@@ -1,6 +1,7 @@
 package gorod
 
 import (
+	"bufio"
 	"errors"
 	"fmt"
 	"os"
@@ -9,21 +10,15 @@ import (
 	"github.com/go-rod/rod"
 	"github.com/go-rod/rod/lib/launcher"
 	"github.com/go-rod/rod/lib/proto"
+	"github.com/grokify/mogo/errors/errorsutil"
 	"github.com/grokify/mogo/os/osutil"
 )
+
+var ErrBrowserNotInitialized = errors.New("browser not initialized")
 
 type ForegroundBrowser struct {
 	Launcher *launcher.Launcher
 	Browser  *rod.Browser
-}
-
-func (fb *ForegroundBrowser) Close() {
-	if fb.Browser != nil {
-		fb.Browser.MustClose()
-	}
-	if fb.Launcher != nil {
-		fb.Launcher.Cleanup()
-	}
 }
 
 // NewForegroundBrowserPaused creates a new `ForegroundBrowser{}`. `delaySeconds`
@@ -59,25 +54,45 @@ func NewForegroundBrowserPaused(navURL string, delaySeconds int, paused bool) (F
 
 	// defer browser.MustClose()
 
-	browser.MustPage(navURL)
+	browser.MustPage(navURL).MustWaitStable()
 
-	// page := browser.MustPage("https://ebay.com/")
+	// page := browser.MustPage("https://example.com/")
 	// page.MustElement("input").MustInput("git").MustType(input.Enter)
 	// text := page.MustElement(".codesearch-results p").MustText()
 	// fmt.Println(text)
 
 	if paused {
 		fmt.Println("Press the Enter Key after logging in!")
-		var input string
-		_, err := fmt.Scanln(&input)
+
+		/*
+			Note: The above message is printed to the console, and the program waits for the user to press the Enter key before proceeding. This allows the user to log in to the browser manually before the program continues with its execution.
+		*/
+		reader := bufio.NewReader(os.Stdin)
+		_, err := reader.ReadString('\n')
 		if err != nil {
-			return ForegroundBrowser{}, err
+			return ForegroundBrowser{}, errorsutil.Wrapf(err, "failed to read input")
 		}
 	}
 
 	return ForegroundBrowser{
 		Launcher: l,
 		Browser:  browser}, nil
+}
+
+func (fb *ForegroundBrowser) Close() {
+	if fb.Browser != nil {
+		fb.Browser.MustClose()
+	}
+	if fb.Launcher != nil {
+		fb.Launcher.Cleanup()
+	}
+}
+
+func (fb *ForegroundBrowser) Cookies() (Cookies, error) {
+	if fb.Browser == nil {
+		return nil, ErrBrowserNotInitialized
+	}
+	return fb.Browser.MustGetCookies(), nil
 }
 
 func (fb *ForegroundBrowser) GetWriteFileHTML(url, filename string, perm os.FileMode, force bool, writeDelay time.Duration) error {
