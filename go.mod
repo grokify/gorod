@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/go-rod/rod v0.116.2
-	github.com/grokify/mogo v0.73.5
+	github.com/grokify/mogo v0.74.0
 	github.com/jessevdk/go-flags v1.6.1
 	github.com/spf13/cobra v1.10.2
 )
