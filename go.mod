@@ -1,10 +1,10 @@
 module github.com/grokify/gorod
 
-go 1.25.0
+go 1.26.0
 
 require (
 	github.com/go-rod/rod v0.116.2
-	github.com/grokify/mogo v0.74.0
+	github.com/grokify/mogo v0.74.1
 	github.com/jessevdk/go-flags v1.6.1
 	github.com/spf13/cobra v1.10.2
 )
